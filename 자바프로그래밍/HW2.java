@@ -31,7 +31,7 @@ public class HW2 {
 		
 		Scanner std=new Scanner(System.in);
 		
-		System.out.print("ÆÄÀÏ ÀÌ¸§, »ç¿ëÀÚÀÌ¸§, »ç¿ëÀÚ ¼ö, Ç×¸ñ ¼ö? ");
+		System.out.print("íŒŒì¼ ì´ë¦„, ì‚¬ìš©ìì´ë¦„, ì‚¬ìš©ì ìˆ˜, í•­ëª© ìˆ˜? ");
 		String fileinfo1=std.nextLine();
 		StringTokenizer fileinfo2=new StringTokenizer(fileinfo1," ");
 		
@@ -155,7 +155,7 @@ public class HW2 {
 				cnt2++;
 			}
 			System.out.println("");
-			System.out.print("°á°ú:");
+			System.out.print("ê²°ê³¼:");
 			for(int i=0;i<m;i++) {
 				int max=0;
 				int index=0;
@@ -169,7 +169,7 @@ public class HW2 {
 				countsimilar[index]=0;
 			}
 		}catch(IOException e) {
-			System.out.println("ÆÄÀÏº¹»ç ¿À·ù");
+			System.out.println("íŒŒì¼ë³µì‚¬ ì˜¤ë¥˜");
 		}
 	}
 }
