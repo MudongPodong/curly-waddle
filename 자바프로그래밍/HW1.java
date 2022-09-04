@@ -135,7 +135,7 @@ public class HW1 {
 
 	public static void main(String[] args) {
 	Scanner std=new Scanner(System.in);
-	System.out.println("ÀÔ·Â ÆÄÀÏ ÀÌ¸§?");
+	System.out.println("ì…ë ¥ íŒŒì¼ ì´ë¦„?");
 	String filename=std.nextLine();
 	
 	File f=new File(filename);
@@ -180,53 +180,53 @@ public class HW1 {
 			strarr[k]=cpyarr[k];
 		}
 		
-		System.out.println("1.´Ü¾îÀÇ ¼ö ="+cnt);
+		System.out.println("1.ë‹¨ì–´ì˜ ìˆ˜ ="+cnt);
 		
 		
 		beforetime=System.currentTimeMillis();
 		Selection.sort(strarr);
 		aftertime=System.currentTimeMillis();
-		System.out.print("2. ¼±ÅÃÁ¤·Ä: ");
+		System.out.print("2. ì„ íƒì •ë ¬: ");
 		if(Selection.isSorted(strarr)) {
-			System.out.print("Á¤·Ä¿©ºÎ= true, ");
+			System.out.print("ì •ë ¬ì—¬ë¶€= true, ");
 		}
 		else {
-			System.out.print("Á¤·Ä¿©ºÎ= false, ");
+			System.out.print("ì •ë ¬ì—¬ë¶€= false, ");
 		}
-		System.out.println("¼Ò¿ä½Ã°£ = "+(aftertime-beforetime)+"ms");
+		System.out.println("ì†Œìš”ì‹œê°„ = "+(aftertime-beforetime)+"ms");
 
 		for(int k=0;k<strarr.length;k++) {
 			strarr[k]=cpyarr[k];
 		}
 		
-		System.out.print("3. »ğÀÔÁ¤·Ä: ");
+		System.out.print("3. ì‚½ì…ì •ë ¬: ");
 		beforetime=System.currentTimeMillis();
 		Insertion.sort(strarr);
 		aftertime=System.currentTimeMillis();
 		if(Insertion.isSorted(strarr)) {
-			System.out.print("Á¤·Ä¿©ºÎ= true, ");
+			System.out.print("ì •ë ¬ì—¬ë¶€= true, ");
 		}
 		else {
-			System.out.print("Á¤·Ä¿©ºÎ= false, ");
+			System.out.print("ì •ë ¬ì—¬ë¶€= false, ");
 		}
-		System.out.println("¼Ò¿ä½Ã°£ = "+(aftertime-beforetime)+"ms");
+		System.out.println("ì†Œìš”ì‹œê°„ = "+(aftertime-beforetime)+"ms");
 		
 		
 		for(int k=0;k<strarr.length;k++) {
 			strarr[k]=cpyarr[k];
 		}
 		
-		System.out.print("4. ShellÁ¤·Ä: ");
+		System.out.print("4. Shellì •ë ¬: ");
 		beforetime=System.currentTimeMillis();
 		Shell.sort(strarr);
 		aftertime=System.currentTimeMillis();
 		if(Shell.isSorted(strarr)) {
-			System.out.print("Á¤·Ä¿©ºÎ= true, ");
+			System.out.print("ì •ë ¬ì—¬ë¶€= true, ");
 		}
 		else {
-			System.out.print("Á¤·Ä¿©ºÎ= false, ");
+			System.out.print("ì •ë ¬ì—¬ë¶€= false, ");
 		}
-		System.out.println("¼Ò¿ä½Ã°£ = "+(aftertime-beforetime)+"ms");
+		System.out.println("ì†Œìš”ì‹œê°„ = "+(aftertime-beforetime)+"ms");
 		
 		
 		for(int k=0;k<strarr.length;k++) {
@@ -234,37 +234,37 @@ public class HW1 {
 		}
 		
 		
-		System.out.print("5. Top Down ÇÕº´Á¤·Ä: ");
+		System.out.print("5. Top Down í•©ë³‘ì •ë ¬: ");
 		beforetime=System.currentTimeMillis();
 		TopDownMerge.sort(strarr);
 		aftertime=System.currentTimeMillis();
 		if(TopDownMerge.isSorted(strarr)) {
-			System.out.print("Á¤·Ä¿©ºÎ= true, ");
+			System.out.print("ì •ë ¬ì—¬ë¶€= true, ");
 		}
 		else {
-			System.out.print("Á¤·Ä¿©ºÎ= false, ");
+			System.out.print("ì •ë ¬ì—¬ë¶€= false, ");
 		}
-		System.out.println("¼Ò¿ä½Ã°£ = "+(aftertime-beforetime)+"ms");
+		System.out.println("ì†Œìš”ì‹œê°„ = "+(aftertime-beforetime)+"ms");
 		
 		for(int k=0;k<strarr.length;k++) {
 			strarr[k]=cpyarr[k];
 		}
 		
 		
-		System.out.print("6. Bottom Up ÇÕº´Á¤·Ä: ");
+		System.out.print("6. Bottom Up í•©ë³‘ì •ë ¬: ");
 		beforetime=System.currentTimeMillis();
 		BottomUpMerge.sort(strarr);
 		aftertime=System.currentTimeMillis();
 		if(BottomUpMerge.isSorted(strarr)) {
-			System.out.print("Á¤·Ä¿©ºÎ= true, ");
+			System.out.print("ì •ë ¬ì—¬ë¶€= true, ");
 		}
 		else {
-			System.out.print("Á¤·Ä¿©ºÎ= false, ");
+			System.out.print("ì •ë ¬ì—¬ë¶€= false, ");
 		}
-		System.out.println("¼Ò¿ä½Ã°£ = "+(aftertime-beforetime)+"ms");
+		System.out.println("ì†Œìš”ì‹œê°„ = "+(aftertime-beforetime)+"ms");
 	
 	}catch(IOException e){
-		System.out.print("ÆÄÀÏº¹»ç ¿À·ù");
+		System.out.print("íŒŒì¼ë³µì‚¬ ì˜¤ë¥˜");
 	}
 	
  }
