@@ -17,15 +17,15 @@ public class LRU extends JFrame {
 	
 	JLabel str1=new JLabel("Reference String");
 	JLabel str2=new JLabel("#Frame");
-	JLabel hitstr1=new JLabel("HitÈ½¼ö:");
-	JLabel pfstr1=new JLabel("PageFaultÈ½¼ö:");
-	JLabel migratestr1=new JLabel("MigrateÈ½¼ö:");
+	JLabel hitstr1=new JLabel("HitíšŸìˆ˜:");
+	JLabel pfstr1=new JLabel("PageFaultíšŸìˆ˜:");
+	JLabel migratestr1=new JLabel("MigrateíšŸìˆ˜:");
 	JLabel hitstr2=new JLabel();
 	JLabel pfstr2=new JLabel();
 	JLabel migratestr2=new JLabel();
 	JLabel pfrate1=new JLabel("Page Fault Rate(%):");
 	JLabel pfrate2=new JLabel();
-	JLabel runtime=new JLabel("½ÇÇà½Ã°£:");
+	JLabel runtime=new JLabel("ì‹¤í–‰ì‹œê°„:");
 	JLabel runtime2=new JLabel();
 	
 	
@@ -92,7 +92,7 @@ public class LRU extends JFrame {
 				}
 				
 				targetstr=str11.getText().split("");
-				for(int i=0;i<targetstr.length;i++) {   //¹®ÀÚ¿­ µ¹·Áº¸±â
+				for(int i=0;i<targetstr.length;i++) {   //ë¬¸ìžì—´ ëŒë ¤ë³´ê¸°
 					point=0;
 					for(int j=0;j<framenum;j++) {       //hit appear
 						if(targetstr[i].equals(frame[j].getstr())) {
@@ -104,7 +104,7 @@ public class LRU extends JFrame {
 						}
 					}
 					if(point==0) {
-						for(int j=0;j<framenum;j++) {    //hit¿¡ ½ÇÆÐÇÏ°í ¾ÆÁ÷ ºó°ø°£ÀÌ ÀÖÀ»¶§
+						for(int j=0;j<framenum;j++) {    //hitì— ì‹¤íŒ¨í•˜ê³  ì•„ì§ ë¹ˆê³µê°„ì´ ìžˆì„ë•Œ
 							if(frame[j].getstr().equals("-")) {    
 								frame[j].setstr(targetstr[i]);
 								frame[j].setorder(0);
@@ -117,7 +117,7 @@ public class LRU extends JFrame {
 					}
 					if(point==0) {
 						max=frame[0].getorder();
-						for(int j=0;j<framenum;j++) {   //hit¿¡ ½ÇÆÐÇÏ°í ºó°ø°£µµ ¾øÀ»¶§
+						for(int j=0;j<framenum;j++) {   //hitì— ì‹¤íŒ¨í•˜ê³  ë¹ˆê³µê°„ë„ ì—†ì„ë•Œ
 							if(max<frame[j].getorder()) {
 								max=frame[j].getorder();
 							}
