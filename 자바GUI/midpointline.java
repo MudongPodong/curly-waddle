@@ -74,7 +74,7 @@ public class midpointline extends JFrame{
 		dx=x1-x0;
 		dy=y1-y0;
 		if(dx>=0 && dy>=0) { 
-			if(dy<dx) {              //±â¿ï±â 1¹Ì¸¸
+			if(dy<dx) {              //ê¸°ìš¸ê¸° 1ë¯¸ë§Œ
 				d=dy*2-dx;
 				inCRE=dy*2;
 				inCRNE=(dy-dx)*2;
@@ -148,7 +148,7 @@ public class midpointline extends JFrame{
 		} else if(dx>0 && dy<0) {
 			dx=Math.abs(dx);
 			dy=Math.abs(dy);
-			if(dx>dy) {              //±â¿ï±â 1ÀÌ»ó
+			if(dx>dy) {              //ê¸°ìš¸ê¸° 1ì´ìƒ
 				d=dy*2-dx;
 				inCRE=dy*2;
 				inCRNE=(dy-dx)*2;
@@ -186,7 +186,7 @@ public class midpointline extends JFrame{
 		} else if(dx<0 && dy>0) {
 			dx=Math.abs(dx);
 			dy=Math.abs(dy);
-			if(dx>dy) {              //±â¿ï±â 1ÀÌ»ó
+			if(dx>dy) {              //ê¸°ìš¸ê¸° 1ì´ìƒ
 				d=dy*2-dx;
 				inCRE=dy*2;
 				inCRNE=(dy-dx)*2;
@@ -233,17 +233,17 @@ public class midpointline extends JFrame{
 	public static void main(String[] args) {
 		Scanner std=new Scanner(System.in);
 		int x0,y0,x1,y1,dx,dy;
-		System.out.print("ÁÂÇ¥1¸¦ ÀÔ·ÂÇÏ¼¼¿ä():");
+		System.out.print("ì¢Œí‘œ1ë¥¼ ì…ë ¥í•˜ì„¸ìš”():");
 		x0=std.nextInt();
 		y0=std.nextInt();
-		System.out.print("ÁÂÇ¥2¸¦ ÀÔ·ÂÇÏ¼¼¿ä():");
+		System.out.print("ì¢Œí‘œ2ë¥¼ ì…ë ¥í•˜ì„¸ìš”():");
 		x1=std.nextInt();
 		y1=std.nextInt();
 		
 		
-		System.out.print("x¸¦ ¾ó¸¸Å­ º¯°æ½ÃÅ°°í ½ÍÀ¸½Å°¡¿ä?: ");
+		System.out.print("xë¥¼ ì–¼ë§Œí¼ ë³€ê²½ì‹œí‚¤ê³  ì‹¶ìœ¼ì‹ ê°€ìš”?: ");
 		dx=std.nextInt();
-		System.out.print("y¸¦ ¾ó¸¸Å­ º¯°æ½ÃÅ°°í ½ÍÀ¸½Å°¡¿ä?: ");
+		System.out.print("yë¥¼ ì–¼ë§Œí¼ ë³€ê²½ì‹œí‚¤ê³  ì‹¶ìœ¼ì‹ ê°€ìš”?: ");
 		dy=std.nextInt();
 		
 		System.out.println(x0+","+y0);
