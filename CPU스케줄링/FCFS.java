@@ -93,9 +93,9 @@ public class FCFS extends JFrame{
 			        		model1.addRow(rows);
 		        		}	
 	        		} catch(IOException k) {
-	        			System.out.println("ÆÄÀÏÀ» Á¦´ë·Î ºÒ·¯¿ÀÁö ¸øÇß½À´Ï´Ù");
+	        			System.out.println("íŒŒì¼ì„ ì œëŒ€ë¡œ ë¶ˆëŸ¬ì˜¤ì§€ ëª»í–ˆìŠµë‹ˆë‹¤");
 	        		} catch (NullPointerException j){
-	        			System.out.println("¾Æ¹«ÆÄÀÏµµ ¼±ÅÃÇÏÁö ¾Ê¾Ò½À´Ï´Ù");
+	        			System.out.println("ì•„ë¬´íŒŒì¼ë„ ì„ íƒí•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤");
 	        		}
 	            }
 	        });
@@ -158,14 +158,14 @@ public class FCFS extends JFrame{
 					 r.setBursttime(queue.peek().getBursttime());
 					 r.setResponsetime(queue.peek().getStartP()-queue.peek().getArrivetime());
 					 r.setWaitingtime(queue.peek().getStartP()-queue.peek().getArrivetime());
-					 r.setTurnaroundtime(queue.peek().getBursttime()+queue.peek().getStartP()-queue.peek().getArrivetime()); //½ÇÇà½Ã°£+´ë±â½Ã°£(½ÃÀÛ½Ã°£-µµÂø½Ã°£)
+					 r.setTurnaroundtime(queue.peek().getBursttime()+queue.peek().getStartP()-queue.peek().getArrivetime()); //ì‹¤í–‰ì‹œê°„+ëŒ€ê¸°ì‹œê°„(ì‹œì‘ì‹œê°„-ë„ì°©ì‹œê°„)
 					 result.add(r);
 					 avg+=r.getWaitingtime();
 					 cnt++;
 					 queue.remove();
 				 }
 				 
-				 printswitiching.setText("½ºÀ§Äª È½¼ö:"+Integer.toString(cnt-1));
+				 printswitiching.setText("ìŠ¤ìœ„ì¹­ íšŸìˆ˜:"+Integer.toString(cnt-1));
 				 
 				 cnt=0;
 				 String[] rows=new String[5];
@@ -182,8 +182,8 @@ public class FCFS extends JFrame{
 				 }
 				 
 				 avg/=cnt;
-				printavg.setText("Æò±Õ´ë±â½Ã°£:"+Double.toString(avg));
-				printruntime.setText("ÀüÃ¼ ½ÇÇà½Ã°£:"+Integer.toString(PresentTime));
+				printavg.setText("í‰ê· ëŒ€ê¸°ì‹œê°„:"+Double.toString(avg));
+				printruntime.setText("ì „ì²´ ì‹¤í–‰ì‹œê°„:"+Integer.toString(PresentTime));
 				
 				panel.setArray(result);
 				panel.removeAll();
@@ -242,7 +242,7 @@ class MyPanel extends JPanel{
 			process.setBounds(finish*10+10,0,60,50);
 			add(process);
 			
-			JLabel burstprocess=new JLabel(Integer.toString(i.getBursttime())+"ÃÊ");
+			JLabel burstprocess=new JLabel(Integer.toString(i.getBursttime())+"ì´ˆ");
 			burstprocess.setBounds(finish*10+10,10,60,50);
 			add(burstprocess);
 			
