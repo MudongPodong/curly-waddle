@@ -19,7 +19,7 @@ public class HW3 {
 		String fileinfo=null;
 		int  wordnum=0;
 		
-		System.out.print("ÆÄÀÏ ÀÌ¸§, ´Ü¾î ½ÖÀÇ ¼ö? ");
+		System.out.print("íŒŒì¼ ì´ë¦„, ë‹¨ì–´ ìŒì˜ ìˆ˜? ");
 		fileinfo=sc.nextLine();
 		StringTokenizer filename=new StringTokenizer(fileinfo," ");
 		fileinfo=filename.nextToken();
@@ -100,7 +100,7 @@ public class HW3 {
 			});
 			
 			cnt=0;
-			System.out.print("Top-k ¹®ÀÚ¿­: ");
+			System.out.print("Top-k ë¬¸ìì—´: ");
 			for(Entry<String,Integer> entry:countmapvalue) {
 				if(cnt==wordnum) break;
 				System.out.print(entry.getKey()+"("+entry.getValue()+") ");
@@ -108,14 +108,14 @@ public class HW3 {
 			}
 			System.out.println();
 			cnt=0;
-			System.out.print("Top-k ´Ü¾î½Ö: ");
+			System.out.print("Top-k ë‹¨ì–´ìŒ: ");
 			for(Entry<String,Integer> entry:countpairvalue) {
 				if(cnt==wordnum) break;
 				System.out.print("["+entry.getKey()+"]("+entry.getValue()+") ");
 				cnt++;
 			}
 		}catch(IOException a) {
-			System.out.println("ÆÄÀÏ º¹»ç¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù");
+			System.out.println("íŒŒì¼ ë³µì‚¬ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤");
 		}
 	}
 }
