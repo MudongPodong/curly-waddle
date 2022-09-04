@@ -13,19 +13,19 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
-public class LFU extends JFrame {                          //order= ÆäÀÌÁö¿¡ ÀÖ¾ú´ø ½Ã°£ order2=ÂüÁ¶°¡ °¡Àå ¸¹Àº°Å
+public class LFU extends JFrame {                          //order= í˜ì´ì§€ì— ìˆì—ˆë˜ ì‹œê°„ order2=ì°¸ì¡°ê°€ ê°€ì¥ ë§ì€ê±°
 	
 	JLabel str1=new JLabel("Reference String");
 	JLabel str2=new JLabel("#Frame");
-	JLabel hitstr1=new JLabel("HitÈ½¼ö:");
-	JLabel pfstr1=new JLabel("PageFaultÈ½¼ö:");
-	JLabel migratestr1=new JLabel("MigrateÈ½¼ö:");
+	JLabel hitstr1=new JLabel("HitíšŸìˆ˜:");
+	JLabel pfstr1=new JLabel("PageFaultíšŸìˆ˜:");
+	JLabel migratestr1=new JLabel("MigrateíšŸìˆ˜:");
 	JLabel hitstr2=new JLabel();
 	JLabel pfstr2=new JLabel();
 	JLabel migratestr2=new JLabel();
 	JLabel pfrate1=new JLabel("Page Fault Rate(%):");
 	JLabel pfrate2=new JLabel();
-	JLabel runtime=new JLabel("½ÇÇà½Ã°£:");
+	JLabel runtime=new JLabel("ì‹¤í–‰ì‹œê°„:");
 	JLabel runtime2=new JLabel();
 	
 	JTextField str11=new JTextField();
@@ -93,7 +93,7 @@ public class LFU extends JFrame {                          //order= ÆäÀÌÁö¿¡ ÀÖ¾
 				}
 				
 				targetstr=str11.getText().split("");
-				for(int i=0;i<targetstr.length;i++) {   //¹®ÀÚ¿­ µ¹·Áº¸±â
+				for(int i=0;i<targetstr.length;i++) {   //ë¬¸ìì—´ ëŒë ¤ë³´ê¸°
 					point=0;
 					for(int j=0;j<framenum;j++) {       //hit appear
 						if(targetstr[i].equals(frame[j].getstr())) {	
@@ -106,7 +106,7 @@ public class LFU extends JFrame {                          //order= ÆäÀÌÁö¿¡ ÀÖ¾
 						}
 					}
 					if(point==0) {
-						for(int j=0;j<framenum;j++) {    //hit¿¡ ½ÇÆĞÇÏ°í ¾ÆÁ÷ ºó°ø°£ÀÌ ÀÖÀ»¶§
+						for(int j=0;j<framenum;j++) {    //hitì— ì‹¤íŒ¨í•˜ê³  ì•„ì§ ë¹ˆê³µê°„ì´ ìˆì„ë•Œ
 							if(frame[j].getstr().equals("-")) {    
 								frame[j].setstr(targetstr[i]);
 								frame[j].setorder(0);
@@ -121,7 +121,7 @@ public class LFU extends JFrame {                          //order= ÆäÀÌÁö¿¡ ÀÖ¾
 					if(point==0) {
 						min=frame[0].getorder2();
 						max=frame[0].getorder();
-						for(int j=0;j<framenum;j++) {   //hit¿¡ ½ÇÆĞÇÏ°í ºó°ø°£µµ ¾øÀ»¶§
+						for(int j=0;j<framenum;j++) {   //hitì— ì‹¤íŒ¨í•˜ê³  ë¹ˆê³µê°„ë„ ì—†ì„ë•Œ
 							if(min>frame[j].getorder2() || (min==frame[j].getorder2() && max<frame[j].getorder())) {
 								min=frame[j].getorder2();
 								max=frame[j].getorder();
