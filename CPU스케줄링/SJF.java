@@ -91,9 +91,9 @@ public class SJF extends JFrame {
 			        		model1.addRow(rows);
 		        		}	
 	        		} catch(IOException k) {
-	        			System.out.println("ÆÄÀÏÀ» Á¦´ë·Î ºÒ·¯¿ÀÁö ¸øÇß½À´Ï´Ù");
+	        			System.out.println("íŒŒì¼ì„ ì œëŒ€ë¡œ ë¶ˆëŸ¬ì˜¤ì§€ ëª»í–ˆìŠµë‹ˆë‹¤");
 	        		} catch (NullPointerException j){
-	        			System.out.println("¾Æ¹«ÆÄÀÏµµ ¼±ÅÃÇÏÁö ¾Ê¾Ò½À´Ï´Ù");
+	        			System.out.println("ì•„ë¬´íŒŒì¼ë„ ì„ íƒí•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤");
 	        		}
 	            }
 	        });
@@ -167,7 +167,7 @@ public class SJF extends JFrame {
 					 avg+=r.getWaitingtime();
 					 cnt++;
 				 }
-				 printswitiching.setText("½ºÀ§Äª È½¼ö:"+Integer.toString(cnt-1));
+				 printswitiching.setText("ìŠ¤ìœ„ì¹­ íšŸìˆ˜:"+Integer.toString(cnt-1));
 				 
 				 cnt=0;
 				 String[] rows=new String[5];
@@ -183,8 +183,8 @@ public class SJF extends JFrame {
 					 cnt++;
 				 }
 				 avg/=cnt;
-				printavg.setText("Æò±Õ´ë±â½Ã°£:"+Double.toString(avg));
-				printruntime.setText("ÀüÃ¼ ½ÇÇà½Ã°£:"+Integer.toString(PresentTime));
+				printavg.setText("í‰ê· ëŒ€ê¸°ì‹œê°„:"+Double.toString(avg));
+				printruntime.setText("ì „ì²´ ì‹¤í–‰ì‹œê°„:"+Integer.toString(PresentTime));
 
 				panel.setArray(result);
 				panel.removeAll();
@@ -241,7 +241,7 @@ class MyPanel2 extends JPanel{
 			process.setBounds(finish*10+10,0,60,50);
 			add(process);
 			
-			JLabel burstprocess=new JLabel(Integer.toString(i.getBursttime())+"ÃÊ");
+			JLabel burstprocess=new JLabel(Integer.toString(i.getBursttime())+"ì´ˆ");
 			burstprocess.setBounds(finish*10+10,10,60,50);
 			add(burstprocess);
 			
